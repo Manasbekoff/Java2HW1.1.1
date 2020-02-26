@@ -1,57 +1,39 @@
 package com.company;
 
 public class Car extends Manufacturer{
-    private String model;
-    private String makeSignal;
-    public String getModel() {
-        System.out.println("Electrocar");
-        return model;
-    }
-
-    public Car(String country, String address, String makeSignal) {
-        super(country, address);
-        this.makeSignal = makeSignal;
-    }
-
+    private String color;
+    private String name;
+    private int year;
     Transmission transmission;
-    Manufacturer manufacturer;
 
-    public Car() {
-    }
-
-    public Transmission getTransmission(Transmission automatic) {
-        return transmission;
-    }
-
-    public Manufacturer getManufacturer() {
-        return manufacturer;
-    }
-
-
-    public Car(Transmission transmission, Manufacturer manufacturer) {
+    public Car(String country, String color, String name, int year, Transmission transmission) {
+        super("Usa");
+        this.color = color;
+        this.name = name;
+        this.year = year;
         this.transmission = transmission;
-        this.manufacturer = manufacturer;
     }
 
-    public final void makeSignal (int numbers){
+
+
+    public final String makeSignal (int numbers) {
         System.out.println(numbers);
+        return null;
     }
 
-    public void makeSignal (String signal, int numbers){
+    public String makeSignal (String signal, int numbers){
         for (int i = 0; i <numbers; i++) {
             System.out.println(signal);
 
         }
+        return signal;
     }
-
-    public String getMakeSignal() {
-        return makeSignal;
-    }
-
 
     public String getInfo(){
-        return "Коробка передачи" + transmission+
-                "Производитель" + manufacturer;
+        return "Цвет" + color +
+                "Имя" + name +
+                "Год" + year;
     }
+
 }
 

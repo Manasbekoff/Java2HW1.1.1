@@ -1,5 +1,13 @@
 package com.company;
 
-public class Interior extends Car{
-    private String material;
+public final class Interior {
+    Interior interior;
+
+    public Interior getInterior() {
+        return interior;
+    }
+
+    public Interior(Interior interior) {
+        this.interior = interior;
+    }
 }
