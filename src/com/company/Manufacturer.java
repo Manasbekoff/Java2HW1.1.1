@@ -3,11 +3,7 @@ package com.company;
 public abstract class Manufacturer {
     private String country;
     private String color;
-    private String year;
-
-    public Manufacturer(String model, String interior) {
-
-    }
+    private int year;
 
     public String getCountry() {
         return country;
@@ -17,14 +13,21 @@ public abstract class Manufacturer {
         return color;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public Manufacturer(String country, String color, String year) {
+    public Manufacturer(String country, String color, int year) {
+        super();
         this.country = country;
         this.color = color;
         this.year = year;
     }
+    public String getInfo(){
+        return "Country " + country+
+                " color " + color +
+                "year" + year;
+    }
+
 }
 

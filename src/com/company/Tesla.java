@@ -2,11 +2,11 @@ package com.company;
 
 public class Tesla extends Car {
     private String model;
-    private String interior;
+    private Interior interior;
 
 
-    public Tesla(String model, String interior) {
-        super(model, interior);
+    public Tesla(String country, String color, int year, String name, Transmission transmission, String model, Interior interior) {
+        super(country, color, year, name, transmission);
         this.model = model;
         this.interior = interior;
     }
@@ -15,7 +15,7 @@ public class Tesla extends Car {
         return model;
     }
 
-    public String getInterior() {
+    public Interior getInterior() {
         return interior;
     }
 

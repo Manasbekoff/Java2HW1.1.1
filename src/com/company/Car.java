@@ -1,24 +1,13 @@
 package com.company;
 
 public class Car extends Manufacturer {
-    public String name;
+    private String name;
     Transmission transmission;
 
-    public Car(String name, String model, String interior) {
-        super(name, model, interior);
-    }
-
-    public Car(String model, String interior) {
-        super(model, interior);
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public Transmission getTransmission() {
-        return transmission;
+    public Car(String country, String color, int year, String name, Transmission transmission) {
+        super(country, color, year);
+        this.name=name;
+        this.transmission=transmission;
     }
 
     public final void makeSignal(int numbers) {
@@ -32,8 +21,16 @@ public class Car extends Manufacturer {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Transmission getTransmission() {
+        return transmission;
+    }
+    @Override
     public String getInfo(){
-        return "Имя " + name +
+        return super.getInfo() + "Имя " + name +
                 " Трансмиссия " + transmission ;
     }
 
