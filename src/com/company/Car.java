@@ -1,38 +1,40 @@
 package com.company;
 
-public class Car extends Manufacturer{
-    private String color;
+public class Car extends Manufacturer {
     private String name;
-    private int year;
     Transmission transmission;
 
-    public Car(String country, String color, String name, int year, Transmission transmission) {
-        super("Usa");
-        this.color = color;
-        this.name = name;
-        this.year = year;
-        this.transmission = transmission;
+    public Car(String country, String color, int year, String name, Transmission transmission) {
+        super(country, color, year);
+    }
+
+    public Car(String model, String interior) {
+        super(model, interior);
     }
 
 
+    public String getName() {
+        return name;
+    }
 
-    public final String makeSignal (int numbers) {
+    public Transmission getTransmission() {
+        return transmission;
+    }
+
+    public final void makeSignal(int numbers) {
         System.out.println(numbers);
-        return null;
     }
 
-    public String makeSignal (String signal, int numbers){
+    public void makeSignal (String signal, int numbers){
         for (int i = 0; i <numbers; i++) {
             System.out.println(signal);
 
         }
-        return signal;
     }
 
     public String getInfo(){
-        return "Цвет" + color +
-                "Имя" + name +
-                "Год" + year;
+        return "Имя " + name +
+                " Трансмиссия " + transmission ;
     }
 
 }

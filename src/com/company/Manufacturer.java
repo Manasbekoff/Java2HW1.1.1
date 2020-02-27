@@ -1,22 +1,32 @@
 package com.company;
 
-public class Manufacturer{
+public abstract class Manufacturer {
     private String country;
+    private String color;
+    private int year;
 
-    public Manufacturer(String country) {
-        super();
-        this.country = country;
+    public Manufacturer(String model, String interior) {
+
     }
+
+
     public String getCountry() {
         return country;
     }
 
-    public Manufacturer() {
-
+    public String getColor() {
+        return color;
     }
 
-
-
-
-
+    public int getYear() {
+        return year;
     }
+
+    public Manufacturer(String country, String color, int year) {
+        super();
+        this.country = country;
+        this.color = color;
+        this.year = year;
+    }
+}
+
