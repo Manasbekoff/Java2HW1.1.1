@@ -1,11 +1,11 @@
 package com.company;
 
 public class Car extends Manufacturer {
-    private String name;
+    public String name;
     Transmission transmission;
 
-    public Car(String country, String color, int year, String name, Transmission transmission) {
-        super(country, color, year);
+    public Car(String name, String model, String interior) {
+        super(name, model, interior);
     }
 
     public Car(String model, String interior) {

@@ -3,12 +3,11 @@ package com.company;
 public abstract class Manufacturer {
     private String country;
     private String color;
-    private int year;
+    private String year;
 
     public Manufacturer(String model, String interior) {
 
     }
-
 
     public String getCountry() {
         return country;
@@ -18,12 +17,11 @@ public abstract class Manufacturer {
         return color;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public Manufacturer(String country, String color, int year) {
-        super();
+    public Manufacturer(String country, String color, String year) {
         this.country = country;
         this.color = color;
         this.year = year;
